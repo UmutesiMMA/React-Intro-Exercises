@@ -1,16 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react'
+import './index.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
+  function alertMe(){
+    return alert('Clicked!')
+  }
   return (
     <>
-    <p>Introductory exercises</p>
+    <button className='border-[1px] p-4 transition ease-in-out delay-200 hover:scale-x-105 hover:bg-blue-200 mx-[40%] mt-64' onClick={alertMe}>Click Me</button>
     </>
   )
 }
 
-export default App
+
