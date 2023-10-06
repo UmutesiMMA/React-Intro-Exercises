@@ -1,13 +1,15 @@
 import React from 'react'
-import './index.css'
+import Joke from './Joke.jsx'
+import data from './jokesData.js'
 
-function App() {
+export default function App() {
+  let jokesElement  = data.map(elt=><Joke key={elt.id} setup={elt.setup} punchline={elt.punchline}/>  )
 
   return (
-    <>
-    <p>Introductory exercises</p>
-    </>
+    <div className='flex gap-8 items-center justify-center px-9 text-center mt-48'>
+      {jokesElement}
+    </div> 
   )
 }
 
-export default App
+
