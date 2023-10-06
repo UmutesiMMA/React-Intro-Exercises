@@ -1,13 +1,14 @@
 import React from 'react'
-import './index.css'
+import List from './List'
 
-function App() {
-
+export default function App() {
+  let arr =['🐄 cow ','🐈 cat','🐔  chicken','🐑 sheep','🐎 horse']
+  let animalList  = arr.map(animal=><List name={animal}></List>)
   return (
     <>
-    <p>Introductory exercises</p>
+    {animalList}
     </>
   )
 }
 
-export default App
+
