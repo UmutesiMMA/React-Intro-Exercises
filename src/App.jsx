@@ -1,13 +1,16 @@
 import React from 'react'
 import './index.css'
 
-function App() {
-
+export default  function App() {
+  let animals =  ['dog','cat','chicke','cow','sheep','horse']
+  let animalElts = animals.map(animal=><li>{animal}</li>)
   return (
     <>
-    <p>Introductory exercises</p>
+    <ul className='leading-9 list-disc p-12 marker:text-blue-400'>
+      {animalElts}
+    </ul>
     </>
   )
 }
 
-export default App
+
