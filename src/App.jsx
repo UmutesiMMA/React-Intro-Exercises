@@ -1,11 +1,11 @@
 import React from 'react'
+ import  Form from './Form.jsx'
 import './index.css'
 
 function App() {
-
   return (
     <>
-    <p>Introductory exercises</p>
+    <Form/>
     </>
   )
 }
