@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .flip-card {
+        @apply bg-transparent w-[300px] h-[200px] border [perspective:1000px] border-solid border-[#f1f1f1];
+      }
+      .flip-card-inner {
+        @apply relative w-full h-full text-center transition-transform duration-[0.8s] [transform-style:preserve-3d];
+      }
+      .flip-card:hover .flip-card-inner {
+        @apply [transform:rotateY(180deg)];
+      }
+      .flip-card-back-front {
+        @apply absolute w-full h-full [-webkit-backface-visibility:hidden] [backface-visibility:hidden];
+      }
+      .flip-card-front {
+        @apply bg-[#bbb] text-[black];
+      }
+      .flip-card-back {
+        @apply bg-[dodgerblue] text-[white] [transform:rotateY(180deg)];
+      }
+    }
